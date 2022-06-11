@@ -33,12 +33,11 @@ nav ul{
 nav ul li{
     list-style: none;
     background-color: rgb(17, 145, 5);
-    padding: 0.3rem;
     border-radius: 1rem;
 }
 
 nav ul li:hover{
-    background-color: rgb(60, 233, 44)
+    background-color: rgb(60, 233, 44);
 }
 
 nav ul li a{
@@ -328,11 +327,16 @@ footer{
 }
 
 .button{
-    background-color: rgb(17, 145, 5);
+    background-color: black;
     font-family: 'Montserrat', sans-serif;
     color: white;
+    border-radius: 0.8rem;
     width: 60px;
     height: 35px;
+}
+
+.button:hover{
+    background-color: rgb(17, 145, 5);
 }
 
 /* MEDIA QUERIES */
