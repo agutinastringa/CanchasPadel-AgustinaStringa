@@ -1,0 +1,554 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 60vh;
+    background-color: hsla(0, 0%, 0%, 0.664);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.img-logo{
+    display: none;
+}
+
+.img-logoclub{
+    display: none;
+}
+
+nav{
+    margin: 1rem;
+    align-self: center;
+    justify-self: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li{
+    list-style: none;
+    background-color: rgb(17, 145, 5);
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+nav ul li:hover{
+    background-color: rgb(60, 233, 44)
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.main-home{
+    display: grid;
+    grid-template-areas: "imagen"
+                        "texto";
+    justify-items: center;
+}
+
+.main-clases{
+    display: grid;
+    grid-template-areas: "imagen"
+                        "texto1"
+                        "horarios"
+                        "texto2"
+                        "boton";
+    justify-items: center;
+}
+
+.main-torneos{
+    display: grid;
+    grid-template-areas: "imagen1"
+                        "texto1"
+                        "imagen2"
+                        "texto2"
+                        "imagen3"
+                        "texto3"
+                        "imagen4"
+                        "texto4"
+                        "imagen5"
+                        "texto5"
+                        "imagen6"
+                        "texto6"
+                        "imagen7"
+                        "texto7"
+                        "boton";
+    justify-items: center;
+}
+
+.main-turnos{
+    display: grid;
+    grid-template-areas: "texto1"
+                        "tabla"
+                        "texto2";
+    justify-items: center;
+}
+
+.main-contacto{
+    display: grid;
+    grid-template-areas: "formulario";
+    justify-items: center;
+}
+
+.img-main{
+    width: 80%;
+    justify-self: center;
+    grid-area: imagen;
+}
+
+.texto-home{
+    margin-top: 20px;
+    grid-area: texto;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.texto-clases1{
+    margin-top: 20px;
+    grid-area: texto1;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.horarios{
+    margin-top: 20px;
+    grid-area: horarios;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.horarios ul li{
+    list-style: none;
+}
+
+.texto-clases2{
+    margin-top: 20px;
+    grid-area: texto2;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.img-torneo1{
+    grid-area: imagen1;
+    margin-top: 20px;
+    justify-self: center;
+}
+
+.texto-torneo1{
+    grid-area: texto1;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.jugadores{
+    margin-top: 10px;
+}
+
+.jugadores ul{
+    list-style: none;
+}
+
+ol{
+    list-style: none;
+}
+
+.img-torneo2{
+    grid-area: imagen2;
+    width: 80%;
+    margin-top: 20px;
+    justify-self: center;
+}
+
+.texto-torneo2{
+    grid-area: texto2;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.img-torneo3{
+    grid-area: imagen3;
+    width: 80%;
+    margin-top: 20px;
+    justify-self: center;
+}
+
+.texto-torneo3{
+    grid-area: texto3;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.img-torneo4{
+    grid-area: imagen4;
+    width: 80%;
+    margin-top: 20px;
+    justify-self: center;
+}
+
+.texto-torneo4{
+    grid-area: texto4;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.img-torneo5{
+    grid-area: imagen5;
+    margin-top: 20px;
+    justify-self: center;
+}
+
+.texto-torneo5{
+    grid-area: texto5;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.img-torneo6{
+    grid-area: imagen6;
+    margin-top: 20px;
+    justify-self: center;
+}
+
+.texto-torneo6{
+    grid-area: texto6;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.img-torneo7{
+    grid-area: imagen7;
+    margin-top: 20px;
+    justify-self: center;
+}
+
+.texto-torneo7{
+    grid-area: texto7;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.volver{
+    margin-top: 20px;
+    grid-area: boton;
+    color: white;
+    text-decoration: underline;
+}
+
+.texto-turnos1{
+    grid-area: texto1;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+
+table tbody tr td{
+    color: white;
+    text-align: center;
+    font-size: 7px;
+}
+
+.table{
+    grid-area: tabla;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: white;
+    background-color: hsla(0, 0%, 0%, 0.788);
+    margin-top: 15px;
+}
+
+.texto-turnos2{
+    grid-area: texto2;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+
+form{
+    grid-area: formulario;
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}
+
+form legend{
+    text-decoration: underline;
+}
+
+input{
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    border:0;
+    height: 25px;
+}
+
+select{
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    border:0;
+    height: 25px;
+}
+
+.label-margin{
+    margin-top: 10px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px;
+}
+
+.botones{
+    margin-top: 10px;
+    margin-left: 35%;
+}
+
+.button{
+    background-color: rgb(17, 145, 5);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: 60px;
+    height: 35px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width:480px) {
+    header{
+        display: grid;
+        grid-template-areas: "logo logoclub nav";
+        justify-items: center;
+        grid-template-columns: 0.5fr 0.5fr 5fr;
+    }
+
+    .img-logo{
+        width: 65px;
+        height: 65px;
+        grid-area: logo;
+        align-self: center;
+        display: block;
+    }
+    
+    .img-logoclub{
+        width: 70px;
+        height: 70px;
+        grid-area: logoclub;
+        align-self: center;
+        display: block;
+    }
+    
+    nav{
+        grid-area: nav;
+    }
+
+    nav ul{
+        justify-content: center;
+        gap: 0.2rem;
+    }
+
+    nav ul li{
+        padding: 0.5rem;
+    }
+
+    nav ul li a{
+        font-size: 13px;
+    }
+
+    .img-main{
+        width: 100%;
+    }
+    
+    table tbody tr td{
+        font-size: 12px;
+    }
+
+    form{
+        font-size: 15px;
+    }
+
+    form legend{
+        font-size: 20px;
+    }
+    
+    input{
+        font-size: 15px;
+    }
+    
+    select{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width:600px) { 
+    nav ul{
+        gap: 1rem;
+    }
+
+    table tbody tr td{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    nav ul{
+        gap: 3rem;
+    }
+    
+    nav ul li{
+        border-radius: 1.5rem;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    .img-logo{
+        width: 95px;
+        height: 95px;
+    }
+    
+    .img-logoclub{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .main-torneos{
+        display: grid;
+        grid-template-areas: "imagen1 texto1"
+                            "texto2 imagen2"
+                            "imagen3 texto3"
+                            "texto4 imagen4"
+                            "imagen5 texto5"
+                            "texto6 imagen6"
+                            "imagen7 texto7"
+                            "boton boton";
+        justify-items: center;
+    }
+
+    .img-main{
+        width: 80%;
+    }
+
+    .texto-home{
+        font-size: 20px;
+    }
+    
+    .texto-clases1{
+        font-size: 20px;
+    }
+    
+    .horarios{
+        font-size: 20px;
+    }
+    
+    .texto-clases2{
+        font-size: 20px;
+    }
+
+    .img-torneo1{
+        margin-top: 0px;
+    }
+
+    .texto-torneo1{
+        font-size: 20px;
+    }
+
+    .img-torneo2{
+        margin-top: 0px;
+    }
+
+    .texto-torneo2{
+        font-size: 20px;
+    }
+
+    .img-torneo3{
+        margin-top: 0px;
+    }
+
+    .texto-torneo3{
+        font-size: 20px;
+    }
+
+    .img-torneo4{
+        margin-top: 0px;
+    }
+
+    .texto-torneo4{
+        font-size: 20px;
+    }
+
+    .img-torneo5{
+        margin-top: 0px;
+    }
+
+    .texto-torneo5{
+        font-size: 20px;
+    }
+
+    .img-torneo6{
+        margin-top: 0px;
+    }
+
+    .texto-torneo6{
+        font-size: 20px;
+    }
+
+    .img-torneo7{
+        margin-top: 0px;
+    }
+
+    .texto-torneo7{
+        font-size: 20px;
+    }
+
+    .texto-turnos1{
+        font-size: 20px;
+    }
+
+    table tbody tr td{
+        font-size: 26px;
+    }
+
+    .texto-turnos2{
+        font-size: 20px;
+    }
+
+    form{
+        font-size: 20px;
+    }
+
+    form legend{
+        font-size: 25px;
+    }
+    
+    input{
+        font-size: 20px;
+    }
+    
+    select{
+        font-size: 20px;
+    }
+}
