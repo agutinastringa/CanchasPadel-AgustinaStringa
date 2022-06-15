@@ -12,11 +12,11 @@ body{
 }
 
 .img-logo{
-    display: none;
+    width: 80px;
 }
 
 .img-logoclub{
-    display: none;
+    width: 80px;
 }
 
 nav{
@@ -40,10 +40,15 @@ nav ul li:hover{
     background-color: rgb(60, 233, 44);
 }
 
-nav ul li a{
+.nav-link{
     color: white;
     text-decoration: none;
     font-size: 12px;
+    text-align: center;
+}
+
+.menu{
+    align-self: right;
 }
 
 .main-home{
@@ -340,30 +345,7 @@ footer{
 }
 
 /* MEDIA QUERIES */
-@media screen and (min-width:480px) {
-    header{
-        display: grid;
-        grid-template-areas: "logo logoclub nav";
-        justify-items: center;
-        grid-template-columns: 0.5fr 0.5fr 5fr;
-    }
-
-    .img-logo{
-        width: 65px;
-        height: 65px;
-        grid-area: logo;
-        align-self: center;
-        display: block;
-    }
-    
-    .img-logoclub{
-        width: 70px;
-        height: 70px;
-        grid-area: logoclub;
-        align-self: center;
-        display: block;
-    }
-    
+@media screen and (min-width:480px) {    
     nav{
         grid-area: nav;
     }
@@ -377,7 +359,7 @@ footer{
         padding: 0.5rem;
     }
 
-    nav ul li a{
+    .nav-link{
         font-size: 13px;
     }
 
@@ -425,18 +407,8 @@ footer{
         border-radius: 1.5rem;
     }
 
-    nav ul li a{
+    .nav-link{
         font-size: 20px;
-    }
-
-    .img-logo{
-        width: 95px;
-        height: 95px;
-    }
-    
-    .img-logoclub{
-        width: 100px;
-        height: 100px;
     }
     
     .main-torneos{
