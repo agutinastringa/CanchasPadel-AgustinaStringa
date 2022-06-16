@@ -19,19 +19,7 @@ body{
     width: 80px;
 }
 
-nav{
-    margin: 1rem;
-    align-self: center;
-    justify-self: center;
-}
-
-nav ul{
-    display: flex;
-    justify-content: space-evenly;
-}
-
 nav ul li{
-    list-style: none;
     background-color: rgb(17, 145, 5);
     border-radius: 1rem;
 }
@@ -47,14 +35,11 @@ nav ul li:hover{
     text-align: center;
 }
 
-.menu{
-    align-self: right;
-}
-
 .main-home{
     display: grid;
     grid-template-areas: "imagen"
-                        "texto";
+                        "texto"
+                        "imagen-logo";
     justify-items: center;
 }
 
@@ -64,6 +49,7 @@ nav ul li:hover{
                         "texto1"
                         "horarios"
                         "texto2"
+                        "imagen-logo"
                         "boton";
     justify-items: center;
 }
@@ -84,6 +70,7 @@ nav ul li:hover{
                         "texto6"
                         "imagen7"
                         "texto7"
+                        "imagen-logo"
                         "boton";
     justify-items: center;
 }
@@ -92,13 +79,15 @@ nav ul li:hover{
     display: grid;
     grid-template-areas: "texto1"
                         "tabla"
-                        "texto2";
+                        "texto2"
+                        "imagen-logo";
     justify-items: center;
 }
 
 .main-contacto{
     display: grid;
-    grid-template-areas: "formulario";
+    grid-template-areas: "formulario"
+                        "imagen-logo";
     justify-items: center;
 }
 
@@ -248,6 +237,11 @@ ol{
     font-size: 15px;
     color: white;
     text-align: center;
+}
+
+.imagen-logo{
+    grid-area: imagen-logo;
+    justify-self: center;
 }
 
 .volver{
@@ -420,6 +414,7 @@ footer{
                             "imagen5 texto5"
                             "texto6 imagen6"
                             "imagen7 texto7"
+                            "imagen-logo imagen-logo"
                             "boton boton";
         justify-items: center;
     }
