@@ -251,6 +251,14 @@ ol{
     text-decoration: underline;
 }
 
+.volver:hover{
+    color: rgb(60, 233, 44);
+}
+
+.volver:active{
+    color: rgb(17, 145, 5);
+}
+
 .texto-turnos1{
     grid-area: texto1;
     font-size: 15px;
