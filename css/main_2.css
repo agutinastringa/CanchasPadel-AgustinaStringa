@@ -12,6 +12,18 @@ body {
     text-decoration: none;
     font-size: 12px;
     text-align: center; }
+  body .main-home {
+    display: grid;
+    grid-template-areas: "carrusel" "texto" "imagen-logo";
+    justify-items: center; }
+    body .main-home div .carousel {
+      grid-area: carrusel; }
+    body .main-home .texto-home {
+      margin-top: 20px;
+      grid-area: texto;
+      font-size: 15px;
+      color: white;
+      text-align: center; }
   body .main-turnos {
     display: grid;
     grid-template-areas: "texto1" "tabla" "texto2" "imagen-logo";
@@ -39,16 +51,18 @@ body {
       color: white;
       text-align: center;
       margin-top: 15px; }
-    body .main-turnos .img-logoclub {
-      width: 80px; }
-    body .main-turnos .imagen-logo {
-      grid-area: imagen-logo;
-      justify-self: center; }
   body footer {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin: 20px; }
+
+.img-logoclub {
+  width: 80px; }
+
+.imagen-logo {
+  grid-area: imagen-logo;
+  justify-self: center; }
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 480px) {
