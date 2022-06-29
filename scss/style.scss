@@ -1,5 +1,28 @@
 @import "utilities/variables";
 
+//mixin
+@mixin textos ($grid-area){
+    grid-area: $grid-area;
+    font-size: 15px;
+    color: $color_textos;
+    text-align: center;
+}
+
+@mixin imagenes-torneos{
+     margin-top: 20px;
+     justify-self: center;
+     width: 300px;
+} 
+
+//extend
+%form {
+    background-color: $color_fondoform;
+    color: $color_textoform;
+    border-radius: 3px;
+    border:0;
+    height: 25px;
+}
+
 body{
     height: 60vh;
     background-color: $fondo_body;
@@ -33,11 +56,86 @@ body{
             }
         }
         .texto-home{
+            @include textos(texto);
             margin-top: 20px;
-            grid-area: texto;
-            font-size: 15px;
-            color: $color_textos;
-            text-align: center;
+        }
+    }
+    .main-torneos{
+        display: grid;
+        grid-template-areas: "imagen1"
+                            "texto1"
+                            "imagen2"
+                            "texto2"
+                            "imagen3"
+                            "texto3"
+                            "imagen4"
+                            "texto4"
+                            "imagen5"
+                            "texto5"
+                            "imagen6"
+                            "texto6"
+                            "imagen7"
+                            "texto7"
+                            "imagen-logo"
+                            "boton";
+        justify-items: center;
+        .img-torneo1{
+            @include imagenes-torneos;
+            grid-area: imagen1;
+        }
+        .texto-torneo1{
+            @include textos(texto1);
+        }
+        .img-torneo2{
+            @include imagenes-torneos;
+            grid-area: imagen2;            
+        }
+        .texto-torneo2{
+            @include textos(texto2);
+        }
+        .img-torneo3{
+            @include imagenes-torneos;
+            grid-area: imagen3;
+        }
+        .texto-torneo3{
+            @include textos(texto3);
+        }
+        .img-torneo4{
+            @include imagenes-torneos;
+            grid-area: imagen4;
+        }
+        .texto-torneo4{
+            @include textos(texto4);
+        }
+        .img-torneo5{
+            @include imagenes-torneos;
+            grid-area: imagen5;
+        }
+        .texto-torneo5{
+            @include textos(texto5);
+        }
+        .img-torneo6{
+            @include imagenes-torneos;
+            grid-area: imagen6;
+        }
+        .texto-torneo6{
+            @include textos(texto6)
+        }
+        .img-torneo7{
+            @include imagenes-torneos;
+            grid-area: imagen7;
+        }
+        .texto-torneo7{
+            @include textos(texto7)
+        }
+        .jugadores{
+            margin-top: 10px;
+            ul{
+                list-style: none;
+            }
+        }
+        ol{
+            list-style: none;
         }
     }
     .main-turnos{
@@ -48,10 +146,7 @@ body{
                             "imagen-logo";
         justify-items: center;
         .texto-turnos1{
-            grid-area: texto1;
-            font-size: 15px;
-            color: $color_textos;
-            text-align: center;
+            @include textos(texto1);
             margin-top: 15px;
         }
         .table{
@@ -74,11 +169,98 @@ body{
             }
         }
         .texto-turnos2{
-            grid-area: texto2;
-            font-size: 15px;
-            color: $color_textos;
-            text-align: center;
+            @include textos(texto2);
             margin-top: 15px;
+        }
+    }
+    .main-clases{
+        display: grid;
+        grid-template-areas: "imagen"
+                            "texto1"
+                            "horarios"
+                            "texto2"
+                            "imagen-logo"
+                            "boton";
+        justify-items: center;
+        .img-clases{
+            width: 300px;
+            justify-self: center;
+            grid-area: imagen;
+        }
+        .texto-clases1{
+            @include textos(texto1);
+            margin-top: 20px;
+        }
+        .horarios{
+            @include textos(horarios);
+            margin-top: 20px;
+            ul{
+                li{
+                    list-style: none;
+                }
+            }
+        }
+        .texto-clases2{
+            @include textos(texto2);
+            margin-top: 20px;
+        }
+    }
+    .main-contacto{
+        display: grid;
+        grid-template-areas: "formulario"
+                            "imagen-logo";
+        justify-items: center;
+        form{
+            grid-area: formulario;
+            color: $color_textos;
+            font-size: 13px;
+            margin: 20px;
+            legend{
+                text-decoration: underline;
+            }
+            .label-margin{
+                margin-top: 10px;
+                input{
+                    @extend %form;
+                }
+                select{
+                    @extend %form;
+                }
+            }
+            .botones{
+                margin-top: 10px;
+                margin-left: 35%;
+                .button{
+                    background-color: black;
+                    font-family: 'Montserrat', sans-serif;
+                    color: white;
+                    border-radius: 0.8rem;
+                    width: 60px;
+                    height: 35px;
+                    &:hover{
+                        background-color: $color_botones;
+                    }
+                }
+            }
+        }
+    }
+    .img-logoclub{
+        width: 80px;
+    }
+    .imagen-logo{
+        grid-area: imagen-logo;
+        justify-self: center;
+    }
+    .volver{
+        margin-top: 20px;
+        grid-area: boton;
+        color: $color_textos;
+        text-decoration: underline;
+        &:hover{
+            color: $color_hover;
+        }
+        &:active{
+            color: $color_botones;
         }
     }
     footer{
@@ -87,14 +269,6 @@ body{
         gap: 1rem;
         margin: 20px;
     }
-}
-
-.img-logoclub{
-    width: 80px;
-}
-.imagen-logo{
-    grid-area: imagen-logo;
-    justify-self: center;
 }
 
 /* MEDIA QUERIES */
@@ -124,16 +298,59 @@ body{
                 }
             }
         }
+        .main-contacto{
+            form{
+                font-size: 15px;
+                legend{
+                    font-size: 20px;
+                }
+                .label-margin{
+                    input{
+                        font-size: 15px;
+                    }
+                    select{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
     }
 }
 
-@media screen and (min-width:600px) { 
+@media screen and (min-width:600px) {
+    @mixin imagenes-torneos {
+        width: 500px;
+    }
+
     body{
         nav{
             ul{
                 gap: 1rem;
             }
         } 
+        .main-torneos{
+            .img-torneo1{
+                @include imagenes-torneos;
+            }
+            .img-torneo2{
+                @include imagenes-torneos;
+            }
+            .img-torneo3{
+                @include imagenes-torneos;
+            }
+            .img-torneo4{
+                @include imagenes-torneos;
+            }
+            .img-torneo5{
+                @include imagenes-torneos;
+            }
+            .img-torneo6{
+                @include imagenes-torneos;
+            }
+            .img-torneo7{
+                @include imagenes-torneos;
+            }
+        }
         .main-turnos{
             table{
                 tbody{
@@ -149,6 +366,20 @@ body{
 }
 
 @media screen and (min-width:1024px) {
+    //mixin
+    @mixin textos ($grid-area){
+        font-size: 20px;
+    }
+
+    //extend
+    @mixin imagenes-torneos{
+        margin-top: 0px;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: center;
+    }
     body{
         nav{ 
             ul{ 
@@ -161,9 +392,46 @@ body{
                 }
             }
         }
+        .main-home{
+            .texto-home{
+                @include textos(texto)
+            }
+        }
+        .main-torneos{
+            grid-template-areas: "imagen1 texto1"
+                                "texto2 imagen2"
+                                "imagen3 texto3"
+                                "texto4 imagen4"
+                                "imagen5 texto5"
+                                "texto6 imagen6"
+                                "imagen7 texto7"
+                                "imagen-logo imagen-logo"
+                                "boton boton";
+            .texto-torneo1{
+                @include textos(texto1)
+            }
+            .texto-torneo2{
+                @include textos(texto2)
+            }
+            .texto-torneo3{
+                @include textos(texto3)
+            }
+            .texto-torneo4{
+                @include textos(texto4)
+            }
+            .texto-torneo5{
+                @include textos(texto5)
+            }
+            .texto-torneo6{
+                @include textos(texto6)
+            }
+            .texto-torneo7{
+                @include textos(texto7)
+            }
+        }
         .main-turnos{
             .texto-turnos1{
-                font-size: 20px;
+                @include textos(texto1)
             }
             table{
                 tbody{ 
@@ -175,7 +443,42 @@ body{
                 }
             }
             .texto-turnos2{
+                @include textos(texto2)
+            }
+        }
+        .main-clases{
+            .img-clases{
+                width: 400px;
+            }
+            .texto-clases1{
+                @include textos(texto1)
+            }
+            .horarios{
+                @include textos(horario)
+            }
+            .texto-clases2{
+                @include textos(texto2)
+            }
+        }
+        .main-contacto{
+            form{
                 font-size: 20px;
+                legend{
+                    font-size: 25px;
+                }
+                .label-margin{
+                    input{
+                        font-size: 20px;
+                    }
+                    select{
+                        font-size: 20px;
+                    }
+                }
+                .botones{
+                    .button{
+                        font-size: 15px;
+                    }
+                }
             }
         }
     }
