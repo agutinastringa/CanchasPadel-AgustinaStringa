@@ -107,10 +107,6 @@ body {
       text-align: center; }
     body .main-torneos .jugadores {
       margin-top: 10px; }
-      body .main-torneos .jugadores ul {
-        list-style: none; }
-    body .main-torneos ol {
-      list-style: none; }
   body .main-turnos {
     display: grid;
     grid-template-areas: "texto1" "tabla" "texto2" "imagen-logo";
